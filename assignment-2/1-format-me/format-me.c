@@ -32,6 +32,7 @@ long lrand() {
   return higher + lower;
 }
 
+/* a simple guessing game where the player needs to repeatedly guess a randomly generated "code" value. If the player correctly guesses the code ten times in a row, the game will reveal a flag */
 void game() {
     char buffer[64] = {0};
     long code, guess = 0;
@@ -43,7 +44,7 @@ void game() {
         printf("Recipient? ");
         fgets(buffer, sizeof(buffer), stdin);
         printf("Sending to ");
-        printf(buffer);
+        printf(buffer); 
         printf("...\n");
 
         printf("Guess? ");
